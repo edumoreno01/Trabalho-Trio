@@ -12,5 +12,5 @@ router.post('/create', taskController.createTask ); // falta implementar
 router.post('/deletar', taskController.deleteTask);
 router.post('/atualizar', taskController.atualizarTask);
 router.post('/deletarAll', taskController.deleteAll);
-router.post('/filtrarTasks', taskController.filtrarTask);
+router.get('/filtrarTasks', taskController.filtrarTask);
 module.exports = router;
