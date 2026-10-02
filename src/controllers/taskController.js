@@ -55,8 +55,8 @@ const deleteAll = (req, res) => {
 }
 
 const filtrarTask = (req, res) => {
-   req.query.completed = Number(req.query.completed);
-   const filtrados = taskModel.filtrarTask(req.query.completed);
+   const completed = Number(req.query.completed);
+   const filtrados = taskModel.filtrarTask(completed);
    res.redirect('/tasks');
 }
 
