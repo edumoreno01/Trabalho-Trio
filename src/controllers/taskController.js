@@ -3,7 +3,7 @@ const taskModel = require('../models/taskModel');
 // GET /tasks - Listar todas as tarefas
 const getAllTasks = (req, res) => {
    const tasks = taskModel.getAllTasks();
-   res.status(200).render("alltasks", {tasks}, filtro:0);
+   res.status(200).render("alltasks", {tasks, filtro: 0});
 };
 
 // GET /tasks/:id - Obter uma tarefa específica
