@@ -10,8 +10,8 @@
             </form>
             <form action="/tasks/filtrarTasks" method="get">
                 <select name="completed" class="form-select w-auto">
-                    <option value="0">Pendente</option>
-                    <option value="1">Concluída</option>
+                    <option value="0" <%= filtro ? '' : 'selected' %>>Pendente</option>
+                    <option value="1" <%= filtro ? 'selected' : '' %>>Concluída</option>
                 </select>
                 <button type="submit" class="btn btn-success">Filtrar</button>
             </form>
