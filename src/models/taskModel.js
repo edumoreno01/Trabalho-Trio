@@ -10,15 +10,13 @@ let tasks = [
 
  const getTaskId = (id) => tasks.find(task => task.id === parseInt(id));
 
- const getCompleted = () => {
-    return tasks.find(item => item.completed === 1)
- };
+
 
  const createTask = (taskData) => {
     const newTask = {
     id: tasks.length > 0 ? Math.max(...tasks.map(t => t.id)) + 1 : 1,
     title: taskData.title,
-    completed: taskData.completed || false
+    completed: taskData.completed
     };
     tasks.push(newTask);
     return tasks;
@@ -82,7 +80,6 @@ const filtrarTask = (completed) => {
  module.exports = {
     getAllTasks ,
     getTaskId ,
-    getCompleted ,
     createTask,
     deleteTask,
     atualizarTask,

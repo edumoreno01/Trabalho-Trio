@@ -28,10 +28,6 @@ const getTaskId = (req, res) => {
 }
 
 // GET /tasks/tasksCompleted - Listar as tarefas Feitas
-const getTaskCompleted = (req, res) => {
-   const tasks = taskModel.getCompleted();
-   res.status(200).json(tasks);
-};
 
 // POST /tasks/create - Criar uma nova tarefa
 const createTask = (req, res) => {
@@ -73,7 +69,6 @@ const atualizarTask = (req, res) => {
 module.exports = {
    getAllTasks,
    getTaskId,
-   getTaskCompleted,
    createTask,
    deleteTask,
    atualizarTask,
