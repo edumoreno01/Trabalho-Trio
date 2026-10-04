@@ -46,7 +46,8 @@
             <div class="alert alert-secondary">Nenhuma tarefa encontrada.</div>
             <% } %>
 
-                <ul class="list-group shadow-sm">
+            <div class="overflow-auto shadow-sm rounded pe-1" style="max-height: 400px;">
+                <ul class="list-group shadow-sm" >
                     <% tasks.forEach(t=> { %>
                         <li class="list-group-item d-flex gap-2 align-items-center">
 
@@ -68,5 +69,6 @@
                         </li>
                         <% }) %>
                 </ul>
+            </div>    
     </div>
 <%- include('partes/footer')%>
